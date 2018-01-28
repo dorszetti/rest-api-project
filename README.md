@@ -11,7 +11,10 @@ Notes
 According to the assignment 'Hotel owners can define which rooms are available.'. The whole requirement is pretty vague, so I assumed that:
 1. A room has a list of availability periods (Availability) which is something set up via db by theoretical hotel owner (i.e. when they plan to make a room available in the future or unavailable for renovation).
 2. There's also booking (Booking) which represents client's reservation order. Booking for a a period during which a room's unavailable is not possible.
-3. For the sake of simplicity I assumed that search parameters for available rooms are all required (since the assignment says nothing about this)
+3. In the real-world application I'd use DTOs for every object I return and separate Applcation and Business layer services, but since I wanted to keep the whole thing as simple as possible, I use
+DTO transformations only when there's some business logic involved (i.e. Booking). Since Client logic is almost nonexistent, I decided to return entity itself. 
+4. For the sake of simplicity I assumed that search parameters for available rooms are all required (since the assignment says nothing about this)
+
 
 About testing
 -----------
